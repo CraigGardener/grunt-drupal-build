@@ -40,8 +40,10 @@ module.exports = function(grunt) {
           dest: drupal.libraryPath()
         });
         grunt.config(['symlink', 'modules'], {
-          src: '<%= config.srcPaths.drupal %>/modules',
-          dest: path.join(drupal.modulePath(), 'custom')
+          cwd: '<%= config.srcPaths.drupal %>/modules',
+          src: ['*'],
+          dest: drupal.modulePath(),
+          filter: 'isDirectory'
         });
         grunt.config(['symlink', 'profiles'], {
           expand: true,
@@ -60,8 +62,10 @@ module.exports = function(grunt) {
           }
         });
         grunt.config(['symlink', 'themes'], {
-          src: '<%= config.srcPaths.drupal %>/themes',
-          dest: path.join(drupal.themePath(), 'custom')
+          cwd: '<%= config.srcPaths.drupal %>/themes',
+          src: ['*'],
+          dest: drupal.themePath(),
+          filter: 'isDirectory'
         });
 
         grunt.task.run([
@@ -75,7 +79,6 @@ module.exports = function(grunt) {
           'symlink:sites',
           'rsync:static'
         ]);
-
         done();
       });
     });
