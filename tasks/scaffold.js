@@ -40,6 +40,7 @@ module.exports = function(grunt) {
           dest: drupal.libraryPath()
         });
         grunt.config(['symlink', 'modules'], {
+          expand: true,
           cwd: '<%= config.srcPaths.drupal %>/modules',
           src: ['*'],
           dest: drupal.modulePath(),
@@ -62,6 +63,7 @@ module.exports = function(grunt) {
           }
         });
         grunt.config(['symlink', 'themes'], {
+          expand: true,
           cwd: '<%= config.srcPaths.drupal %>/themes',
           src: ['*'],
           dest: drupal.themePath(),
