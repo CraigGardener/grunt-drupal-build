@@ -62,7 +62,7 @@ module.exports = function(grunt) {
       {
         expand: true,
         cwd: '<%= config.buildPaths.develop %>/sites',
-        src: ['*'],
+        src: ['*', '!all'],
         dest: '<%= config.srcPaths.drupal %>/sites'
       }
     ]

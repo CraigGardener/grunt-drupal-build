@@ -18,7 +18,7 @@ module.exports = function(grunt) {
 
     ],
     sites: [
-      '<%= config.buildPaths.develop %>/sites',
+      '<%= config.buildPaths.develop %>/sites/*',
       '!<%= config.buildPaths.develop %>/sites/all'
     ],
     temp: [
