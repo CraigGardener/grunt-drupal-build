@@ -24,11 +24,11 @@ module.exports = function(grunt) {
     var buildPaths = grunt.config('config.buildPaths');
     buildPaths = _.extend({
       build: 'build',
-      develop: 'www',
+      develop: 'web',
       packages: 'build/packages',
       reports: 'build/reports',
       temp: 'build/temp',
-      web: 'app'
+      web: 'web-deploy'
     }, buildPaths);
 
     return buildPaths;

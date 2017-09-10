@@ -57,6 +57,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: '<%= config.srcPaths.drupal %>/sites',
           src: ['*'],
+          overwrite: true,
           dest: drupal.sitePath(),
           filter: function(path) {
             return (path !== '<%= config.srcPaths.drupal %>/sites/all');

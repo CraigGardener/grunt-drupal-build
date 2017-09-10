@@ -3,7 +3,6 @@ module.exports = function(grunt) {
   var config = {
     config: {
       srcPaths: {
-        make: "src/project.make.yml",
         drupal: "src",
         config: "config"
       },
@@ -13,8 +12,8 @@ module.exports = function(grunt) {
         package: "build/packages",
         reports: "build/reports",
         temp: "build/temp",
-        develop: "app",
-        web: "web"
+        develop: "web",
+        web: "web-deploy"
       },
       srcFiles: [
         "!sites/*/files/**",
