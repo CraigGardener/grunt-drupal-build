@@ -92,7 +92,7 @@ module.exports = function(grunt) {
   }
 
   // Process .make files if configured.
-  if (grunt.config.get('config.drupalVersion') <= "7") {
+  if (grunt.config.get('config.srcPaths.make')) {
     // If build/develop exists, but is empty, skip the newer check.
     // This facilitates situations where the build/develop is generated as a mounted
     // directory point with a newer timestamp than the Drush Makefiles.
